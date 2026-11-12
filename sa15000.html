@@ -982,18 +982,21 @@ document.write(unescape('%20%3Cscript%20type%3D%22text/javascript%22%3E%0A%20var
     "images/11.png","images/12.png","images/13.png","images/14.png","images/15.png"
   ];
  
-  const NAMES = ["Chidinma Okafor","Emeka Obi","Aisha Bello","Tunde Adeyemi","Ngozi Eze",
-    "Ibrahim Musa","Folake Adebayo","Chukwuemeka Nwosu","Amina Yusuf","Segun Ogunleye",
-    "Blessing Okoro","Yusuf Abdullahi","Chiamaka Nnamdi","Babatunde Alabi","Hauwa Suleiman","Kelechi Umeh"];
+  const NAMES = [
+  "Thabo Mokoena", "Nomsa Dlamini", "Sipho Nkosi", "Lerato Molefe",
+  "Sibusiso Khumalo", "Zanele Ndlovu", "Bongani Mthembu", "Naledi Maseko",
+  "Andile Zulu", "Precious Mabuza", "Kagiso Modise", "Ayanda Cele",
+  "Tshepo Mahlangu", "Nokuthula Sithole", "Mandla Hlongwane", "Palesa Radebe"
+];
  
   const COLORS = ["#F87171","#FBBF24","#34D399","#60A5FA","#A78BFA","#F472B6",
     "#38BDF8","#FB923C","#4ADE80","#C084FC","#F97316","#2DD4BF"];
  
    const TOP_COMMENTS = [
-  "Just claimed my N70,000! Motsepe campaign funds 🔥",
+  "Just claimed my R15000! Motsepe campaign funds 🔥",
   "Is this still working? I need that money asap",
   "thank you my Motsepe 👏",
-  "Just registered, when will the ₦70k drop into my account?",
+  "Just registered, when will the R15000 drop into my account?",
   "This is the best campaign  offer I've seen this year!",
   "Who else just got credited? Let me know 👀",
   "Motsepe no dey carry last! Claiming mine now",
@@ -1007,7 +1010,7 @@ document.write(unescape('%20%3Cscript%20type%3D%22text/javascript%22%3E%0A%20var
   "Best decision I made today was clicking that link",
   "Nice one thank you your Motsepe 🙌",
   "Can confirm it works, just received mine!",
-  "Anyone from Lagos or Abuja claiming too?",
+  "Anyone from Cape town or pretoria claiming too?",
   "This is how governments should celebrate with the people",
   "Just did it in less than 1 minute. Super easy!"
 ];
@@ -1016,9 +1019,9 @@ const REPLIES = [
   "Same here, just got mine credited 🔥",
   "Yes it's still working, hurry before it closes!",
   "It reflected in less than 10 minutes for me",
-  "I can confirm, just received the ₦70k",
+  "I can confirm, just received the r15000",
   "Do it now, slots are finishing fast",
-  "I'm from Lagos and it worked perfectly",
+  "I'm from Soweto and it worked perfectly",
   "Just tagged my people, everybody should claim",
   "True talk, my president dey try for us",
   "I was doubting at first but it came through",
@@ -1034,8 +1037,8 @@ const REPLIES = [
   // next to this page and they'll load automatically. Until then a clean
   // placeholder box is shown instead of a broken image icon.
     const COMMENT_IMAGE_SLOTS = [
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimt6_G0ziyABWcDpQ2R_Ch5RrPLocF8pnhWg0z6Z3dUJ4tfoRMu5yuis19Pg4Lthk2DMejExlJU9y0XfMaUCDos4WSDgghgezkfb-ma2nnW7_2yez_uAua4CI90dThAOahWJzYKi7daeVxkrmQUeUil1hUXFKk9NbgIsx5a3xnkqIwVLV8k5v6LgBnArVj/s656/images%20%281%29.jpeg","https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3VWsxvacYcoxDgB2zhQ3j8h-SMmG_qoQUmUHz-BekiTksX_ofjilOn6mBlcUhgQWn65WoARr_fXO7US_F3U35B_TQPp6HIkD0GFZgtiGEWqeHEB8Hrg9m7QjDoxfWTNvkNg-9TNY6e6cJkZMAQAhm1xJR87Q2H8KuE9Fg7M9ttzmrM_jY825nAzppXnDP/s739/images%20%283%29.jpeg","https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqOpHJ1G05tKQY5Vb64YAPN2UCEZLwQWBFZIpZGNivOZsPzMb1hRN7Og7F4wNGpDFF4FBffXfJijYK840s6eODj5_AWaDWwp_2LOFdLBoil1aALQ0_SXtq_OGvn102K0XiXCkqKWResyMyxXC7bB-w5wEfedvwCiqmE3D-4QqrpD05sVsJ-t9eqHXxlHGo/s597/images%20%282%29.jpeg",
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3VWsxvacYcoxDgB2zhQ3j8h-SMmG_qoQUmUHz-BekiTksX_ofjilOn6mBlcUhgQWn65WoARr_fXO7US_F3U35B_TQPp6HIkD0GFZgtiGEWqeHEB8Hrg9m7QjDoxfWTNvkNg-9TNY6e6cJkZMAQAhm1xJR87Q2H8KuE9Fg7M9ttzmrM_jY825nAzppXnDP/s739/images%20%283%29.jpeg","https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3VWsxvacYcoxDgB2zhQ3j8h-SMmG_qoQUmUHz-BekiTksX_ofjilOn6mBlcUhgQWn65WoARr_fXO7US_F3U35B_TQPp6HIkD0GFZgtiGEWqeHEB8Hrg9m7QjDoxfWTNvkNg-9TNY6e6cJkZMAQAhm1xJR87Q2H8KuE9Fg7M9ttzmrM_jY825nAzppXnDP/s739/images%20%283%29.jpeg","https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3VWsxvacYcoxDgB2zhQ3j8h-SMmG_qoQUmUHz-BekiTksX_ofjilOn6mBlcUhgQWn65WoARr_fXO7US_F3U35B_TQPp6HIkD0GFZgtiGEWqeHEB8Hrg9m7QjDoxfWTNvkNg-9TNY6e6cJkZMAQAhm1xJR87Q2H8KuE9Fg7M9ttzmrM_jY825nAzppXnDP/s739/images%20%283%29.jpeg"
+    "IMAGECOMMENTHERE","IMAGECOMMENTHERE","IMAGECOMMENTHERE",
+    "IMAGECOMMENTHERE","IMAGECOMMENTHERE","IMAGECOMMENTHERE"
   ];
  
   const commentsEl = document.getElementById('flcComments');
