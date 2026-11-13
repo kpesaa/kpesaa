@@ -1356,9 +1356,9 @@ const REPLIES = [
  
   function seedInitialComments(){
     const seed = [
-      ["Chidinma Okafor", pick(TOP_COMMENTS), [["Emeka Obi", pick(REPLIES)]]],
-      ["Ibrahim Musa", pick(TOP_COMMENTS), []],
-      ["Ngozi Eze", pick(TOP_COMMENTS), [["Aisha Bello", pick(REPLIES)], ["Segun Ogunleye", pick(REPLIES)]]],
+      ["Sandra Mark", pick(TOP_COMMENTS), [["Ayanda Khumalo", pick(REPLIES)]]],
+      ["Samuel Kaya", pick(TOP_COMMENTS), []],
+      ["Asemahle Yanga", pick(TOP_COMMENTS), [["Mbeki Azania", pick(REPLIES)], ["Chauke Amukelani", pick(REPLIES)]]],
     ];
     seed.slice().reverse().forEach(([name, text, replies])=>{
       const id = appendTopLevel(name, text, maybeCommentImagePath());
